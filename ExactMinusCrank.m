@@ -1,3 +1,4 @@
+#plots the graph of the exact solution minus the solution obtained by the Crank-Nicolson method
 clear 
 L=1;
 dx=0.1;
@@ -50,5 +51,8 @@ t=(0:0.04:2);
 [Xg,tg] = meshgrid(X,t);
 E = -0.25*power(pi,2)*tg;
 F = (80/power(pi,2))*sin(pi/2)*(exp(E)).*(sin(pi*Xg));
+for k = 2:5
+   F = F + (1/k^2)*(80/power(pi,2))*sin(k*pi/2)*(exp(E*(k^2))).*(sin(k*pi*Xg));
+end
 figure;
 surf(Xg,tg,F-u.');
