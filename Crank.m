@@ -1,3 +1,4 @@
+%Uses the Crank-Nicolson method to graph the heat equation
 clear 
 L=1;
 dx=0.1;
