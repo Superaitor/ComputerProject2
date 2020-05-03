@@ -1,4 +1,4 @@
-%simply plots the exact fourier series for the heat equation
+%simply plots the exact fourier series for the heat equation (first 5 terms)
 clear;
 x = linspace(0,1,25);
 t = linspace(0,2,25);
